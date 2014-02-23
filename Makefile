@@ -11,7 +11,7 @@ LD86	= ld86 -0
 HOSTCFLAGS = -Wall -Wstrict-prototypes -g
 HOSTCC 	= gcc
 CC      = gcc 
-AS      = as -arch i386
+AS      = 'as --32 -march=i386'
 LD      = ld
 OBJCOPY = objcopy -O binary -R .note -R .comment -S
 
