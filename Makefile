@@ -21,7 +21,7 @@ INCLUDEDIR = include
 JP = 
 
 CFLAGS = -m32 -O2  -g $(JP) -ffreestanding -Wall -I$(INCLUDEDIR) 
-ASMFLAGS = -I$(INCLUDEDIR) -arch i386
+ASMFLAGS = -I$(INCLUDEDIR) -m32
 SYSLDFLAGS = -T system.lds
 USRLDFLAGS = -T user.lds
 LINKFLAGS = -m elf_i386 -g
