@@ -107,4 +107,4 @@ emuldbg: zeos.bin
 	bochs_nogdb -q -f .bochsrc
 
 prepare-deps:
-	sudo apt-get install build-essential bin86 -qq
+	sudo apt-get install build-essential bin86 gcc-multilib -qq
