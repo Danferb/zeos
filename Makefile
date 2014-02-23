@@ -24,7 +24,7 @@ CFLAGS = -m32 -O2  -g $(JP) -ffreestanding -Wall -I$(INCLUDEDIR)
 ASMFLAGS = -I$(INCLUDEDIR)
 SYSLDFLAGS = -T system.lds
 USRLDFLAGS = -T user.lds
-LINKFLAGS = -m i386linux -g 
+LINKFLAGS = -m elf_i386 -g
 
 SYSOBJ = interrupt.o entry.o sys_call_table.o io.o sched.o sys.o mm.o devices.o utils.o hardware.o list.o 
 
