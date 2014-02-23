@@ -3,8 +3,8 @@
  *
  *  Copyright (C) 1991, 1992  Linus Torvalds
  *  Copyright (C) 1997 Martin Mares
- *  2003 Modificat per Zeus Gómez per insertar el codi d'usuari
- *       també a la imatge del nucli en espai d'adreces separat.
+ *  2003 Modificat per Zeus Gomez per insertar el codi d'usuari
+ *       tambe a la imatge del nucli en espai d'adreces separat.
  */
 
 /*

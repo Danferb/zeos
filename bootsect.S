@@ -164,7 +164,7 @@ a20_wait:
 ! reasons why it might be a good idea. It won't hurt in any case.
 
 	mov	eax,#1		! protected mode (PE) bit
-	mov	cr0,eax		! a partir del i386 aix�ja � possible fer-ho
+	mov	cr0,eax		! a partir del i386 aixo ja possible fer-ho
 
 ! Well, that certainly wasn't fun :-(. Hopefully it works, and we don't
 ! need no steenking BIOS anyway (except for the initial loading :-).
