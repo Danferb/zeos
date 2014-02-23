@@ -1,0 +1,5 @@
+language: c
+compiler: gcc
+before_script: sudo apt-get update -qq
+install: make prepare-deps
+script: make
