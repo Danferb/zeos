@@ -1,10 +1,3 @@
-!
-!	bootsect.s    
-!
-! bootsect.s � la versi�simplificada del bootsect.s original de Linux.
-! L'arxiu compilat hauria d'ocupar, sense les capceleres, exactament 512
-! bytes, que � la longitud del sector 0 d'un disquet.
-
 #define SEC_PISTA            18	! Modificar en cas d'utilitzar disquets
 				! diferents de 1.44Mb:
 				! 38: 2.88Mb; 18: 1.44Mb; 15: 1.2Mb; 9: 720kb
@@ -46,7 +39,7 @@ go:	mov	di,#0x4000-12	! 0x4000 is arbitrary value >= length of
 				! 12 is disk parm size
 
 !
-! ZEUS: 2. Configuramos la pila de usuario en la direcci� 0x3ff40
+! ZEUS: 2. Configuramos la pila de usuario en la direccion 0x3ff40
 !
 	mov	ds,ax
 	mov	ss,ax		! put stack at INITSEG:0x4000-12.
@@ -326,7 +319,7 @@ empty_8042_end_loop:
 ret
 
 sectors:
-	.word SEC_PISTA  ! 18 sectores por pista: t�ico disquet de 1.44Mb
+	.word SEC_PISTA  ! 18 sectores por pista: tico disquet de 1.44Mb
 
 msg1:
 	.byte 13,10
