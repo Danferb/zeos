@@ -12,6 +12,8 @@
 Gate idt[IDT_ENTRIES];
 Register    idtR;
 
+void keyboard_handler();
+
 char char_map[] =
 {
   '\0','\0','1','2','3','4','5','6',
@@ -28,6 +30,10 @@ char char_map[] =
   '\0','\0','\0','\0','\0','\0','\0','\0',
   '\0','\0'
 };
+
+char get_converted_char(unsigned char scancode) {
+  return char_map[scancode];
+}
 
 void setInterruptHandler(int vector, void (*handler)(), int maxAccessibleFromPL)
 {
@@ -82,6 +88,7 @@ void setIdt()
   
   set_handlers();
 
+  setInterruptHandler(33, keyboard_handler, 0);
   /* ADD INITIALIZATION CODE FOR INTERRUPT VECTOR */
 
   set_idt_reg(&idtR);

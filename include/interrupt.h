@@ -17,4 +17,6 @@ void setTrapHandler(int vector, void (*handler)(), int maxAccessibleFromPL);
 
 void setIdt();
 
+char get_converted_char(unsigned char scancode);
+
 #endif  /* __INTERRUPT_H__ */

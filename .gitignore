@@ -1,1 +1,10 @@
 *.o
+*~
+*.out
+*.s
+system
+user
+build
+zeos.bin
+bootsect
+*.txt
